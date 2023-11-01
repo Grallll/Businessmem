@@ -37,7 +37,7 @@ public class Organization extends Base{
         Map<String, String> result = new HashMap<String, String>();
         result.put("Name", name);
         result.put("Businessmen", ""+businessmen);
-        result.put("Specializations", ""+specializations);
+        result.put("Specializations", (""+specializations).replaceAll("[//{//}]", ""));
         result.put("Workers", ""+workers);
         return result;
     }
