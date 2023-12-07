@@ -2,16 +2,16 @@ package Classes;
 
 import java.util.ArrayList;
 
-public class Storage {
-    private ArrayList<Worker> arrWorker = new ArrayList<>();
-    private ArrayList<Organization> arrOrganization = new ArrayList<>();
-    private ArrayList<Businessman> arrBusinessman = new ArrayList<>();
+public interface Storage{
+    void put(Worker worker);
+    void put(Organization organization);
+    void put(Businessman businessman);
 
-    public void put(Worker worker){arrWorker.add(worker);}
-    public void put(Organization organization){arrOrganization.add(organization);}
-    public void put(Businessman businessman){arrBusinessman.add(businessman);}
+    void del(Worker worker);
+    void del(Organization organization);
+    void del(Businessman businessman);
 
-    public ArrayList<Worker> getWorker(){return arrWorker;}
-    public ArrayList<Organization> getOrganization(){return arrOrganization;}
-    public ArrayList<Businessman> getBusinessman(){return arrBusinessman;}
+    ArrayList<Worker> getWorker();
+    ArrayList<Organization> getOrganization();
+    ArrayList<Businessman> getBusinessman();
 }

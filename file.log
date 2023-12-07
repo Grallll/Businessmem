@@ -1,0 +1,7 @@
+[23-11-2023 15:32:15|Classes.Logs.LogStash.<init>|привет] Created log file
+[23-11-2023 15:35:09|Classes.Local.put|class Classes.Worker] Ivan
+[23-11-2023 15:35:50|Classes.Local.put|Worker] Ivan
+[23-11-2023 15:38:50 | Classes.Local.put | Worker] Ivan
+[23-11-2023 16:28:56 | Classes.Local.put | Worker] Ivan
+[23-11-2023 16:29:18 | Classes.Local.put | Worker] Ivan
+[23-11-2023 16:31:38 | Classes.Local.put | Worker] Ivan

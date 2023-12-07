@@ -16,8 +16,8 @@ import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 
 import Classes.Businessman;
+import Classes.Local;
 import Classes.Organization;
-import Classes.Storage;
 import Classes.Worker;
 
 
@@ -28,7 +28,7 @@ public class GUI {
 }
 class MyWindow{
     private JFrame frame = new JFrame("Businessmem");
-    private Storage store = new Storage();
+    private Local store = new Local();
     private JPanel topPanel;
     private JPanel bottomPanelLeft;
     private JPanel bottomPanelRight;
@@ -56,6 +56,7 @@ class MyWindow{
         organization.addActionListener((new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 bottomPanelLeft.removeAll();
+                bottomPanelRight.removeAll();
                 JPanel scroll_panel = new JPanel();
                 scroll_panel.setLayout(new GridLayout(0, 1));
 
@@ -70,8 +71,13 @@ class MyWindow{
                 }
                 JScrollPane scrollPane = new JScrollPane(scroll_panel);
                 bottomPanelLeft.add(scrollPane);
+
                 bottomPanelLeft.revalidate();
                 bottomPanelLeft.repaint();
+
+                bottomPanelRight.revalidate();
+                bottomPanelRight.repaint();
+                
                 bottomPanelLeft.isVisible();
             }
         }));
@@ -81,6 +87,7 @@ class MyWindow{
         businessman.addActionListener((new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 bottomPanelLeft.removeAll();
+                bottomPanelRight.removeAll();
                 JPanel scroll_panel = new JPanel();
                 scroll_panel.setLayout(new GridLayout(0, 1));
 
@@ -95,8 +102,13 @@ class MyWindow{
                 }
                 JScrollPane scrollPane = new JScrollPane(scroll_panel);
                 bottomPanelLeft.add(scrollPane);
+
                 bottomPanelLeft.revalidate();
                 bottomPanelLeft.repaint();
+
+                bottomPanelRight.revalidate();
+                bottomPanelRight.repaint();
+                
                 bottomPanelLeft.isVisible();
             }
         }));
@@ -106,6 +118,7 @@ class MyWindow{
         worker.addActionListener((new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 bottomPanelLeft.removeAll();
+                bottomPanelRight.removeAll();
                 JPanel scroll_panel = new JPanel();
                 scroll_panel.setLayout(new GridLayout(0, 1));
 
@@ -120,8 +133,13 @@ class MyWindow{
                 }
                 JScrollPane scrollPane = new JScrollPane(scroll_panel);
                 bottomPanelLeft.add(scrollPane);
+
                 bottomPanelLeft.revalidate();
                 bottomPanelLeft.repaint();
+
+                bottomPanelRight.revalidate();
+                bottomPanelRight.repaint();
+
                 bottomPanelLeft.isVisible();
             }
         }));
@@ -172,7 +190,7 @@ class MyWindow{
         bottomPanelRight.isVisible();
     }
 
-    public void putStore(Storage store){
+    public void putStore(Local store){
         this.store = store;
     }
 }

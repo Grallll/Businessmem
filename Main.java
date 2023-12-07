@@ -1,5 +1,5 @@
+import Classes.Local;
 import Classes.Organization;
-import Classes.Storage;
 import Classes.Worker;
 
 public class Main
@@ -22,7 +22,7 @@ public class Main
 		System.out.println(org_1.info());
 		System.out.println(org_1.hire(worker));
 
-		Storage store = new Storage();
+		Local store = new Local();
 		store.put(org_1);
 		store.put(org_2);
 		store.put(worker);
